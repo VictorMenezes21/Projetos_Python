@@ -1,14 +1,23 @@
-#Escreva um programa que leia um número inteiro qualquer e peça para o usuário escolher qual será a base de conversão:
-# 1- Binário, 2- Octal, 3- Hexadecimal
+#Escreva um programa que leia um número inteiro qualquer e peça para o usuário escolher qual será a base de conversão
 
-num = float(input('\033[1mDigite um número:\033[m '))
-escolha = int(input('\033[1;32mEscolha a base de conversão:\033[m\n1. Binário\n2. Octal\n3. Hexadecimal\n'))
+num = int(input('Digite um número: '))
 
-if escolha == 1:
-    pass
+print('''Escolha uma das bases para conversão: 
 
-elif escolha == 2:
-    pass
+[1] Converter para BINÁRIO
+[2] Converter para OCTAL
+[3] Converter para HEXADECIMAL''')
+
+opcao = int(input('R: '))
+
+if opcao == 1:
+    print(f'{num} convertido para BINÁRIO é igual a {bin(num)[2:]}')
+
+elif opcao == 2:
+    print(f'{num} convertido para OCTAL é igual a {oct(num)[2:]}')
+
+elif opcao == 3:
+    print(f'{num} convertido para HEXADECIMAL é igual a {hex(num)[2:]}')
 
 else:
-    pass
+    print('\033[31mOpção inválida, tente novamente\033[m')
